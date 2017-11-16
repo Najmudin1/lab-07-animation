@@ -6,18 +6,18 @@ body {
   animation-timing-function: ease-in-out;
 }
 
-.moveme {
+ .moveme { 
   position: absolute;
   /* comment out 'top' and 'left' and see what happens */
-  top: 0;
-  left: 0;
+  top: 0; 
+  left: 0; 
   box-sizing: border-box;
   width: 200px;
   height: 200px;
   padding: 0 1em;
-  background-color: red;
+  background-color: yellow;
   animation-name: movingBox;
-  animation-duration: 5s;
+  animation-duration: 10s;
   animation-iteration-count: 1; /* infinite */
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
@@ -31,7 +31,7 @@ body {
     'position' triggers 'layout' so the CPU must calculate every frame,
     so *never* use for mobiles or with "animation-iteration: infinite;"
 */
-@keyframes movingBox {
+@keyframes movingBox { 
   0%   { background-color:rgb(255, 0, 0); left: 0px; top: 0px; }
   25%  { background-color:rgb(255, 165, 0); left: calc(100% - 200px); top: 0px; }
   50%  { background-color:rgb(64, 224, 208); left: calc(100% - 200px); top: calc(100% - 200px); border-radius: 50%; }
